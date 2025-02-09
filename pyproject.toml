@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "SCStickMap"
+version = "0.1.0"
+description = "Turn a Star Citizen keymap file into labels on an annotated image of VKB controllers."
+authors = [{ name = "Toby Searle", email = "14909402+twsearle@users.noreply.github.com" }]
+dependencies = [
+    "bs4"
+    , "PyMuPDF"
+    , "argparse"
+]
+
+[project.scripts]
+sc-stick-map = "SCStickMap.cli:main"
